@@ -8,7 +8,7 @@
  * It contains a loop that repeatedly reads input and generates output
  * until the users wants to leave.
  * 
- * @author     Michael KÃ¶lling and David J. Barnes
+ * @author     Michael Kölling and David J. Barnes
  * @version    0.1 (2011.07.31)
  */
 public class SupportSystem
@@ -37,13 +37,16 @@ public class SupportSystem
         printWelcome();
 
         while(!finished) {
-            String input = reader.getInput();
+            String espaces = reader.getInput();//variable local
+            String input = espaces.replaceAll(" ","").toLowerCase();//aliminacion de espacios en blanco y aceptacion de mayusculas
+            
 
-            if(input.startsWith("bye")) {
+            if(input.startsWith("bye") || input.equalsIgnoreCase("bye")){
                 finished = true;
             }
             else {
-                String response = responder.generateResponse();
+                
+                String response = responder.generateResponse(input);
                 System.out.println(response);
             }
         }
