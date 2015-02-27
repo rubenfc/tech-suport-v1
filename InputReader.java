@@ -1,5 +1,6 @@
 import java.util.HashSet;
 import java.util.Scanner;
+import java.util.ArrayList;
 
 /**
  * InputReader reads typed text input from the standard text terminal. 
@@ -30,8 +31,8 @@ public class InputReader
     {
         System.out.print("> ");         // print prompt
         String inputLine = reader.nextLine();
-        
-        
-        return inputLine;
+        String pregunta[] = inputLine.split(" "); 
+        String respuesta = pregunta[0];
+        return respuesta;
     }
 }

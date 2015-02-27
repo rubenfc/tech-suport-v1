@@ -18,8 +18,8 @@ public class Responder
      */
     public Responder()
     {
-        //this.rnd=new Random();
-        //this.a= new ArrayList<>();
+        this.rnd=new Random();
+        this.a= new ArrayList<>();
         respuesta = new HashMap<>();
         respuesta.put("hola", "buenos días");
         respuesta.put("enfadado", "tranquilicese por favor");
