@@ -1,7 +1,7 @@
 import java.util.HashSet;
 import java.util.Scanner;
 import java.util.ArrayList;
-
+import java.util.HashMap;
 /**
  * InputReader reads typed text input from the standard text terminal. 
  * The text typed by a user is returned.
@@ -27,12 +27,19 @@ public class InputReader
      *
      * @return  A String typed by the user.
      */
-    public String getInput()
+    public HashSet getInput()
     {
         System.out.print("> ");         // print prompt
         String inputLine = reader.nextLine();
         String pregunta[] = inputLine.split(" "); 
-        String respuesta = pregunta[0];
-        return respuesta;
+        //String respuesta = pregunta[0];
+        //return respuesta;
+        HashSet<String> msm = new HashSet<>();
+        String[] array = inputLine.split(" ");
+        for(int cont = 0; cont < array.length; cont++)
+        {
+            msm.add(array[cont]);
+        }
+        return msm;
     }
 }

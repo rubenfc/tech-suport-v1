@@ -37,7 +37,7 @@ public class SupportSystem
         printWelcome();
 
         while(!finished) {
-            String espaces = reader.getInput(pregunta);//variable local
+            String espaces = reader.getInput();//variable local
             String input = espaces.replaceAll(" ","").toLowerCase();//aliminacion de espacios en blanco y aceptacion de mayusculas
             
 
