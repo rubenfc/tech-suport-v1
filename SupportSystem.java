@@ -37,8 +37,7 @@ public class SupportSystem
         printWelcome();
 
         while(!finished) {
-            String espaces = reader.getInput();//variable local
-            String input = espaces.replaceAll(" ","").toLowerCase();//aliminacion de espacios en blanco y aceptacion de mayusculas
+            HashSet<String> espaces = reader.getInput();//variable local
             
 
             if(input.startsWith("bye") || input.equalsIgnoreCase("bye")){
@@ -46,7 +45,7 @@ public class SupportSystem
             }
             else {
                 
-                String response = responder.generateResponse(input);
+                String response = responder.generateResponse(espaces);
                 System.out.println(response);
             }
         }
